@@ -1,15 +1,19 @@
 * {
-  margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  font-family: $font-main;
+  margin: 0;
 }
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
+  font-size: $font-size-16;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  color: $primary;
+  font-family: $font-main;
 }
 
 h1 {
@@ -29,8 +33,8 @@ textarea {
   border: 0;
 
   &:focus {
-    outline: none;
     box-shadow: none;
+    outline: none;
   }
 }
 
@@ -41,6 +45,6 @@ button {
 
 ul,
 ol {
-  padding-left: 0;
   list-style: none;
+  padding-left: 0;
 }
