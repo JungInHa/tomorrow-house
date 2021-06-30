@@ -12,21 +12,9 @@
       @include flexbox(end);
     }
 
-    .gnb-search-button {
+    .gnb-icon-button.is-search {
       margin-right: 4px;
     }
-  }
-
-  &-icon-button {
-    @include flexbox;
-    color: $secondary;
-    font-size: 24px;
-    height: 32px;
-    width: 32px;
-  }
-
-  &-menu-button {
-    color: $blue;
   }
 
   .logo {
