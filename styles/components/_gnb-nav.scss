@@ -3,11 +3,11 @@
 
   &-list {
     @include flexbox(start);
+    margin-left: -#{$padding};
   }
 
   &-item {
     margin-right: 24px - ($padding * 2);
-    transform: translateX(-$padding);
 
     &.is-active,
     &:hover {
