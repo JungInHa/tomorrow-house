@@ -1,0 +1,59 @@
+.my-menu {
+  $tooltop-size: 12px;
+
+  background-color: hotpink;
+  position: relative;
+
+  &-content {
+    @include pos-center-x;
+    border-radius: 4px;
+    box-shadow: $dropdown-shadow;
+
+    &::before,
+    &::after {
+      @include pos-center-x;
+      border-bottom: $tooltop-size solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: $tooltop-size solid transparent;
+      content: '';
+      display: block;
+      height: 0;
+      top: -#{$tooltop-size * 2};
+      width: 0;
+    }
+
+    &::before {
+      border-bottom-color: $border;
+    }
+
+    &::after {
+      border-bottom-color: $white;
+      top: -#{$tooltop-size * 2 - 2px};
+    }
+  }
+
+  &-list {
+    // background-color: $white;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding: 8px;
+    width: 200px;
+  }
+
+  &-item {
+    a,
+    button {
+      @include flexbox(start);
+      border-radius: 2px;
+      height: 44px;
+      padding: 0 8px;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $background;
+    }
+  }
+}
