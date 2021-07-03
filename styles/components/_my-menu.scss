@@ -69,6 +69,7 @@
     a,
     button {
       @include flexbox(start);
+      @include text-style(16, $primary);
       border-radius: 2px;
       height: 44px;
       padding: 0 8px;
