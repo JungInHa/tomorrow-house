@@ -1,0 +1,61 @@
+.sidebar {
+  background-color: $white;
+  padding: 32px 20px;
+  width: 240px;
+
+  &-header {
+    padding: 0 12px;
+
+    .logo {
+      @include flexbox(start);
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        height: 20px;
+        width: auto;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    @include flexbox(start);
+    height: 88px;
+    padding: 32px 0;
+  }
+
+  &-user {
+    a {
+      @include flexbox(start);
+      @include text-style(14, $primary);
+      font-weight: 700;
+      width: 100%;
+    }
+
+    .avatar-24 {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .username {
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
+    padding: 24px 0;
+
+    a {
+      width: 84px;
+    }
+  }
+}
