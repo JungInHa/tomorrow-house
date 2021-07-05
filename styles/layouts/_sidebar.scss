@@ -58,4 +58,32 @@
       width: 84px;
     }
   }
+
+  &-nav {
+    .drawer-menu {
+      border-top: 1px solid $border;
+
+      &.is-expert {
+        border-bottom: 1px solid $border;
+      }
+    }
+  }
+
+  &-user-menu {
+    margin-top: 16px;
+
+    .user-menu-item {
+      a {
+        @include flexbox(start);
+        @include text-style(14, $primary);
+        height: 36px;
+        padding: 0 12px;
+        width: 100%;
+
+        &:active {
+          color: $blue;
+        }
+      }
+    }
+  }
 }
