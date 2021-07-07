@@ -81,6 +81,7 @@
 
     .btn-primary {
       width: 88px;
+
       i {
         margin-left: 4px;
       }
@@ -88,10 +89,34 @@
   }
 
   @include responsive(D) {
-    &-right {
+    &-search {
+      margin-right: 24px;
+      position: relative;
+      width: 264px;
+
       .input-group {
-        margin-right: 24px;
-        width: 264px;
+        width: 100%;
+      }
+
+      .search-history {
+        background-color: $white;
+        border: 1px solid border;
+        border-radius: 4px;
+        box-shadow: $dropdown-shadow;
+        display: none;
+        left: 0;
+        padding: 16px 8px 8px;
+        position: absolute;
+        top: calc(100% + 8px);
+        width: 100%;
+
+        &.is-active {
+          display: block;
+        }
+
+        &-header {
+          padding: 0 8px;
+        }
       }
     }
   }
