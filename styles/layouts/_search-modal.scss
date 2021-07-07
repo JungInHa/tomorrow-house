@@ -8,6 +8,10 @@
   width: 100%;
   z-index: $search-modal-level;
 
+  &-header {
+    margin-bottom: 20px;
+  }
+
   &-form {
     @include flexbox(between);
 
