@@ -1,0 +1,25 @@
+.search-modal {
+  background-color: $white;
+  height: 100vh;
+  left: 0;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $search-modal-level;
+
+  &-form {
+    @include flexbox(between);
+
+    .input-group {
+      flex-grow: 1;
+    }
+
+    .btn-ghost {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-left: 8px;
+      width: 56px;
+    }
+  }
+}
