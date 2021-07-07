@@ -47,7 +47,7 @@
     top: $button-size + $tooltop-size + 8px;
     transform: translate3d(-50%, -10px, 0);
     transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out,
-      transform 200ms ease-in-out;
+    transform 200ms ease-in-out;
     visibility: hidden;
 
     &::before,
