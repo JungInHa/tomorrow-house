@@ -1,17 +1,22 @@
 .lnb {
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2;
+
   overflow-x: auto;
 
   &-list {
     @include inline-flexbox;
-    left: -8px;
-    position: relative;
+    border-bottom: 1px solid $border;
+    height: 40px;
+    margin-left: -#{$grid-margin};
+    padding: 0 ($grid-margin - $lnb-link-padding);
     white-space: nowrap;
   }
 
   &-item {
     &.is-active {
       a {
-        border-bottom: 2px solid $blue;
+        border-bottom-color: $blue;
         color: $blue;
       }
     }
@@ -19,14 +24,10 @@
     a {
       @include inline-flexbox;
       @include text-style(13, $dark);
+      border-bottom: 2px solid transparent;
       font-weight: 700;
       height: 40px;
-      padding: 0 8px;
-    }
-
-    .ic-new {
-      color: $red;
-      font-size: 16px;
+      padding: 0 $lnb-link-padding;
     }
   }
 
