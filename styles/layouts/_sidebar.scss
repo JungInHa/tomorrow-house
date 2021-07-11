@@ -1,6 +1,7 @@
 .sidebar {
   $sidebar-width: 240px;
 
+  @include no-scrollbar;
   background-color: $white;
   height: 100vh;
   left: 0;
@@ -100,9 +101,5 @@
         }
       }
     }
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 }

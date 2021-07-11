@@ -2,6 +2,7 @@
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + $gutter / 2;
 
+  @include no-scrollbar;
   overflow-x: auto;
 
   &-list {
@@ -29,9 +30,5 @@
       height: 40px;
       padding: 0 $lnb-link-padding;
     }
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 }
