@@ -5,6 +5,7 @@
   $grid-margin: $sm-margin + $gutter / 2;
 
   @include no-scrollbar;
+  background-color: $white;
   overflow-x: auto;
 
   &-list {
