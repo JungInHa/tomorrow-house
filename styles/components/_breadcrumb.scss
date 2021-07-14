@@ -1,0 +1,42 @@
+.breadcrumb {
+  @include flexbox(start);
+  flex-wrap: wrap;
+  padding: 10px 0;
+
+  a {
+    @include text-style(13, $secondary);
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  .ic-chevron {
+    color: $tertiary;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 2px;
+    transform: rotate(-90deg);
+  }
+
+  @include responsive(T) {
+    padding: 16px 0;
+
+    a {
+      @include text-style(14, $secondary);
+    }
+
+    .ic-chevron {
+      margin: 0 4px;
+    }
+  }
+
+  @include responsive(D) {
+    padding-bottom: 40px;
+    padding-top: 24px;
+
+    a:hover {
+      opacity: 0.4;
+    }
+  }
+}
