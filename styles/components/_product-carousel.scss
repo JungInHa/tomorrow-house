@@ -90,4 +90,33 @@
       }
     }
   }
+
+  @include responsive(D) {
+    @include flexbox(end, start);
+    flex-direction: row-reverse;
+
+    &-slider {
+      height: 500px;
+      width: 500px;
+    }
+
+    &-thumbnail {
+      margin-right: 8px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+    }
+
+    .thumbnail-item {
+      margin-bottom: 8px;
+      margin-right: 0;
+
+      button,
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+  }
 }
