@@ -1,0 +1,63 @@
+.checkout-card {
+  background-color: $background;
+  border-radius: 4px;
+  padding: 8px 10px 8px 12px;
+  position: relative;
+
+  .checkout-header {
+    margin-bottom: 8px;
+  }
+
+  .checkout-title {
+    @include text-style(13, $primary);
+    font-weight: 400;
+    padding-right: 36px - 10px;
+  }
+
+  .delete-button {
+    @include inline-flexbox;
+    color: $secondary;
+    font-size: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 20px;
+  }
+
+  .checkout-footer {
+    @include flexbox(between);
+  }
+
+  .checkout-select {
+    display: inline-block;
+    position: relative;
+
+    select {
+      @include text-style(14, $primary);
+      appearance: none;
+      background-color: $white;
+      border: 1px solid $border;
+      border-radius: 3px;
+      height: 24px;
+      line-height: 1;
+      padding: 0 8px;
+      width: 72px;
+    }
+
+    i {
+      @include pos-center-y;
+      color: $tertiary;
+      font-size: 20px;
+      pointer-events: none;
+      position: absolute;
+      right: 2px;
+    }
+  }
+
+  @include responsive(D) {
+    .checkout-title {
+      @include text-style(16);
+    }
+  }
+}
