@@ -4,6 +4,8 @@
   background-color: $white;
   border-bottom: 1px solid $border;
   height: 40px;
+  position: sticky;
+  top: $gnb-height-sm + $lnb-height-sm;
   width: 100%;
 
   &-list {
@@ -45,6 +47,7 @@
     background-color: $background;
     border-bottom: 0;
     height: 54px;
+    top: $gnb-height-md + $lnb-height-md;
 
     &-list {
       margin: 0;
