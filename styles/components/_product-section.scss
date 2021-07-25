@@ -4,7 +4,7 @@
   &-divider {
     background-color: $border;
     height: 8px;
-    margin: 0 -15px; // todo: grid constants로 빼기
+    margin: 0 -#{$grid-margin};
   }
 
   @include responsive(T) {
