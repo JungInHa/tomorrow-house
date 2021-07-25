@@ -1,0 +1,21 @@
+.product-section {
+  padding-bottom: 20px;
+
+  &-divider {
+    background-color: $border;
+    height: 8px;
+    margin: 0 -15px; // todo: grid constants로 빼기
+  }
+
+  @include responsive(T) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 692px;
+    padding-bottom: 80px;
+    width: 100%;
+  }
+
+  @include responsive(D) {
+    margin-left: 0;
+  }
+}
