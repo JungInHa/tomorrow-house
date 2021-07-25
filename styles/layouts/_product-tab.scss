@@ -7,6 +7,7 @@
   position: sticky;
   top: $gnb-height-sm + $lnb-height-sm;
   width: 100%;
+  z-index: $product-tab-level;
 
   &-list {
     @include flexbox;
