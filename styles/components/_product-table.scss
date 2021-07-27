@@ -5,6 +5,7 @@
 
   border-collapse: collapse;
   table-layout: fixed;
+  width: 100%;
 
   tr {
     @include text-style(12, $primary);
