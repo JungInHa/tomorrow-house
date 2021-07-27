@@ -1,0 +1,71 @@
+.review-scoreboard {
+  @include flexbox;
+  background-color: $background;
+  border-radius: 4px;
+  height: 152px;
+  width: 100%;
+
+  .score-summary,
+  .score-detail {
+    width: 50%;
+  }
+
+  .score-summary {
+    @include flexbox;
+    flex-direction: column;
+    order: 1;
+
+    .average-score {
+      @include text-style(24, $dark);
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .star-rating {
+      @include star-rating(20px);
+    }
+  }
+
+  .score-detail {
+    text-align: center;
+    order: 3;
+  }
+
+  &::before {
+    background-color: $border;
+    content: '';
+    display: block;
+    height: 96px;
+    order: 2;
+    width: 1px;
+  }
+
+  @include responsive(T) {
+    height: 148px;
+    padding: 0 72px;
+
+    .score-summary,
+    .score-detail {
+      width: auto;
+    }
+
+    .score-summary {
+      flex-direction: row-reverse;
+
+      .average-score {
+        margin-bottom: 0;
+      }
+
+      .star-rating {
+        font-size: 24px;
+        margin-right: 16px;
+      }
+    }
+
+    &::before {
+      height: 72px;
+      margin: 0 69px;
+    }
+  }
+}
