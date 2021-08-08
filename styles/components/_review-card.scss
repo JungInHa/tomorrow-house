@@ -41,6 +41,21 @@
   &-body {
     margin-bottom: 20px;
 
+    .review-image {
+      border-radius: 4px;
+      height: 64px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      width: 64px;
+
+      img {
+        display: block;
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
     p {
       @include text-style(14, $primary);
     }
@@ -52,6 +67,13 @@
     button {
       margin-right: 8px;
       width: 120px;
+
+      i {
+        color: $white;
+        font-size: 20px;
+        margin-left: -4px;
+        margin-right: 4px;
+      }
     }
 
     p {
@@ -80,6 +102,12 @@
     }
 
     &-body {
+      .review-image {
+        height: 112px;
+        margin-bottom: 16px;
+        width: 112px;
+      }
+
       p {
         @include text-style(14);
       }
