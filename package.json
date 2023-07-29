@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "node-sass": "^6.0.0"
-  },
   "devDependencies": {
     "sass-lint": "^1.13.1"
   },
@@ -24,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/JungInHa/tomorrow-house/issues"
   },
-  "homepage": "https://github.com/JungInHa/tomorrow-house#readme"
+  "homepage": "https://github.com/JungInHa/tomorrow-house#readme",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
 }
