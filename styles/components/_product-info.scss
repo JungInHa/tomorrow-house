@@ -86,7 +86,6 @@
   }
 
   @include responsive(T) {
-    margin-bottom: 40px;
     padding: 0;
 
     &-header {
