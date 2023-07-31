@@ -11,22 +11,27 @@ const productCarousel = tns({
   preventScrollOnTouch: true,
 })
 
-const userGallery = tns({
-  container: '.user-gallery .slider-list',
+const userGalleryMobile = tns({
+  container: '.user-gallery.is-mobile .slider-list',
   controls: false,
-  controlsContainer: '.user-gallery-controls',
-  navContainer: '.user-gallery .thumbnail-list',
+  navContainer: '.user-gallery.is-mobile .thumbnail-list',
   navAsThumbnails: true,
   gutter: 4,
   edgePadding: 16,
   loop: false,
   arrowKeys: true,
   mouseDrag: true,
-  responsive: {
-    768: {
-      gutter: 6,
-      controls: true,
-      edgePadding: 75,
-    },
-  },
+})
+
+const userGalleryDesktop = tns({
+  container: '.user-gallery.is-desktop .slider-list',
+  controlsContainer: '.user-gallery.is-desktop .user-gallery-controls',
+  navContainer: '.user-gallery.is-desktop .thumbnail-list',
+  navAsThumbnails: true,
+  gutter: 6,
+  edgePadding: 75,
+  controls: true,
+  loop: false,
+  arrowKeys: true,
+  mouseDrag: true,
 })
