@@ -1,7 +1,7 @@
 .product-tab {
   background-color: $white;
   border-bottom: 1px solid $border;
-  height: 40px;
+  height: $product-tab-height-sm;
   position: sticky;
   top: $gnb-height-sm + $lnb-height-sm;
   width: 100%;
@@ -45,7 +45,7 @@
   @include responsive(T) {
     background-color: $background;
     border-bottom: 0;
-    height: 54px;
+    height: $product-tab-height-md;
     top: $gnb-height-md + $lnb-height-md;
     margin: 40px 0;
 
