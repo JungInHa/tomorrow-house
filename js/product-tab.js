@@ -3,6 +3,8 @@ const productTabButtonList = productTab.querySelectorAll('button')
 
 const TOP_HEADER_DESKTOP = 80 + 50 + 54
 const TOP_HEADER_MOBILE = 50 + 40 + 40
+const SECTION_PADDING_DESKTOP = 80
+const SECTION_PADDING_MOBILE = 8
 
 let currentActiveTab = productTab.querySelector('.is-active')
 
@@ -52,5 +54,25 @@ productTabButtonList.forEach((button) => {
   button.addEventListener('click', scrollToTabPanel)
 })
 
+function updateActiveTabOnScroll() {
+  const scrolledAmount =
+    window.scrollY +
+    (window.innerWidth >= 768
+      ? TOP_HEADER_DESKTOP + SECTION_PADDING_DESKTOP
+      : TOP_HEADER_MOBILE + SECTION_PADDING_MOBILE)
+
+  const newActiveTabIdx = Object.values(
+    productTabPanelPositionMap
+  ).findLastIndex((position) => scrolledAmount >= position)
+  const newActiveTab = productTabButtonList[newActiveTabIdx]?.parentNode
+
+  if (newActiveTab && newActiveTab !== currentActiveTab) {
+    newActiveTab.classList.add('is-active')
+    currentActiveTab.classList.remove('is-active')
+    currentActiveTab = newActiveTab
+  }
+}
+
 window.addEventListener('load', detectTabPanelPosition)
 window.addEventListener('resize', detectTabPanelPosition)
+window.addEventListener('scroll', updateActiveTabOnScroll)
