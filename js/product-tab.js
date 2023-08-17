@@ -6,6 +6,18 @@ const TOP_HEADER_MOBILE = 50 + 40 + 40
 
 let currentActiveTab = productTab.querySelector('.is-active')
 
+const productTabPanelIdList = [
+  'product-spec',
+  'product-review',
+  'product-inquiry',
+  'product-shipment',
+  'product-recommendation',
+]
+const productTabPanelList = productTabPanelIdList.map((id) =>
+  document.querySelector(`#${id}`)
+)
+const productTabPanelPositionMap = {}
+
 function toggleActiveTab() {
   const tabItem = this.parentNode
 
@@ -27,7 +39,18 @@ function scrollToTabPanel() {
   window.scrollBy({ top: scrollAmount, behavior: 'smooth' })
 }
 
+function detectTabPanelPosition() {
+  productTabPanelList.forEach((panel) => {
+    const id = panel.getAttribute('id')
+    const position = window.scrollY + panel.getBoundingClientRect().top
+    productTabPanelPositionMap[id] = position
+  })
+}
+
 productTabButtonList.forEach((button) => {
   button.addEventListener('click', toggleActiveTab)
   button.addEventListener('click', scrollToTabPanel)
 })
+
+window.addEventListener('load', detectTabPanelPosition)
+window.addEventListener('resize', detectTabPanelPosition)
