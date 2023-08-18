@@ -79,7 +79,6 @@ function updateActiveTabOnScroll() {
 
   let newActiveTab = productTabButtonList[newActiveTabIdx]
   if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-    console.log(window.scrollY + window.innerHeight, document.body.offsetHeight)
     newActiveTab = productTabButtonList[productTabButtonList.length - 1]
   }
 
@@ -97,5 +96,5 @@ function updateActiveTabOnScroll() {
 }
 
 window.addEventListener('load', detectTabPanelPosition)
-window.addEventListener('resize', detectTabPanelPosition)
-window.addEventListener('scroll', updateActiveTabOnScroll)
+window.addEventListener('resize', _.throttle(detectTabPanelPosition, 1000))
+window.addEventListener('scroll', _.throttle(updateActiveTabOnScroll, 300))
