@@ -7,6 +7,7 @@ const SECTION_PADDING_DESKTOP = 80
 const SECTION_PADDING_MOBILE = 8
 
 let currentActiveTab = productTab.querySelector('.is-active')
+let disableUpdating = false
 
 const productTabPanelIdList = [
   'product-spec',
@@ -24,9 +25,14 @@ function toggleActiveTab() {
   const tabItem = this.parentNode
 
   if (currentActiveTab !== tabItem) {
+    disableUpdating = true
     tabItem.classList.add('is-active')
     currentActiveTab.classList.remove('is-active')
     currentActiveTab = productTab.querySelector('.is-active')
+
+    setTimeout(() => {
+      disableUpdating = false
+    }, 1000)
   }
 }
 
@@ -47,6 +53,8 @@ function detectTabPanelPosition() {
     const position = window.scrollY + panel.getBoundingClientRect().top
     productTabPanelPositionMap[id] = position
   })
+
+  updateActiveTabOnScroll()
 }
 
 productTabButtonList.forEach((button) => {
@@ -55,6 +63,10 @@ productTabButtonList.forEach((button) => {
 })
 
 function updateActiveTabOnScroll() {
+  if (disableUpdating) {
+    return
+  }
+
   const scrolledAmount =
     window.scrollY +
     (window.innerWidth >= 768
@@ -64,12 +76,23 @@ function updateActiveTabOnScroll() {
   const newActiveTabIdx = Object.values(
     productTabPanelPositionMap
   ).findLastIndex((position) => scrolledAmount >= position)
-  const newActiveTab = productTabButtonList[newActiveTabIdx]?.parentNode
 
-  if (newActiveTab && newActiveTab !== currentActiveTab) {
-    newActiveTab.classList.add('is-active')
-    currentActiveTab.classList.remove('is-active')
-    currentActiveTab = newActiveTab
+  let newActiveTab = productTabButtonList[newActiveTabIdx]
+  if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+    console.log(window.scrollY + window.innerHeight, document.body.offsetHeight)
+    newActiveTab = productTabButtonList[productTabButtonList.length - 1]
+  }
+
+  if (newActiveTab) {
+    newActiveTab = newActiveTab.parentNode
+
+    if (newActiveTab !== currentActiveTab) {
+      newActiveTab.classList.add('is-active')
+      if (currentActiveTab !== null) {
+        currentActiveTab.classList.remove('is-active')
+      }
+      currentActiveTab = newActiveTab
+    }
   }
 }
 
