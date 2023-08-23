@@ -3,11 +3,11 @@
 
   @include no-scrollbar;
   background-color: $white;
+  border-bottom: 1px solid $border;
   overflow-x: auto;
 
   &-list {
-    @include inline-flexbox;
-    border-bottom: 1px solid $border;
+    @include inline-flexbox(start);
     height: $lnb-height-sm;
     margin-left: -#{$grid-margin};
     padding: 0 ($grid-margin - $lnb-link-padding);
@@ -37,7 +37,6 @@
   }
 
   @include responsive(T) {
-    border-bottom: 1px solid $border;
     height: $lnb-height-md;
     overflow-x: visible;
 
