@@ -2,7 +2,7 @@
   @include flexbox;
   border-radius: 50%;
   position: relative;
-  color: $secondary;
+  color: $primary;
   font-size: 24px;
   height: 32px;
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
@@ -25,7 +25,7 @@
   }
 
   &:active {
-    color: $primary;
+    color: $blue;
   }
 
   .badge {
@@ -47,8 +47,7 @@
 
   @include responsive(T) {
     &:hover {
-      background-color: $blue;
-      color: $white;
+      color: $blue;
     }
   }
 }

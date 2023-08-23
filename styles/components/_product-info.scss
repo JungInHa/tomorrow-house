@@ -9,7 +9,7 @@
       font-weight: 700;
 
       &:active {
-        opacity: 0.4;
+        opacity: 0.5;
       }
     }
 
@@ -92,6 +92,10 @@
       .info-brand {
         display: inline-block;
         margin-bottom: 8px;
+
+        &:hover {
+          opacity: 0.5;
+        }
       }
 
       .info-title {
