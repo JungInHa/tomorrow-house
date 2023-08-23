@@ -114,6 +114,13 @@
       img {
         height: 75px;
         width: 75px;
+        transition: transform 200ms ease-in-out;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
       }
     }
   }
