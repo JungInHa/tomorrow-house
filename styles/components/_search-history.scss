@@ -16,9 +16,9 @@
     .placeholder {
       @include flexbox(start);
       @include text-style(16, $tertiary);
-      font-weight: 400;
       height: 44px;
       padding: 0 8px;
+      font-weight: 400;
     }
   }
 
@@ -32,22 +32,22 @@
 
     .word-button {
       @include text-style(16, $primary);
-      font-weight: 400;
+      width: 100%;
       padding: 10px 0 10px 8px;
       padding-right: $close-button-size;
+      font-weight: 400;
       text-align: left;
-      width: 100%;
     }
 
     .delete-button {
       @include flexbox;
-      color: $tertiary;
-      font-size: 16;
-      height: $close-button-size;
       position: absolute;
-      right: 0;
       top: 6px;
+      right: 0;
       width: $close-button-size;
+      height: $close-button-size;
+      font-size: 16;
+      color: $tertiary;
 
       &:hover {
         color: $primary;

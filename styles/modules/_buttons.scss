@@ -1,8 +1,8 @@
 %btn-base {
   @include inline-flexbox;
-  border-radius: 4px;
-  font-weight: 700;
   padding: 0 8px;
+  font-weight: 700;
+  border-radius: 4px;
 
   &:disabled {
     cursor: not-allowed;
@@ -14,8 +14,8 @@
 
 .btn-primary {
   @extend %btn-base;
-  background-color: $blue;
   color: $white;
+  background-color: $blue;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
@@ -25,8 +25,8 @@
 
 .btn-secondary {
   @extend %btn-base;
-  background-color: $border;
   color: $primary;
+  background-color: $border;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
@@ -36,9 +36,9 @@
 
 .btn-outlined {
   @extend %btn-base;
+  color: $blue;
   background-color: $white;
   border: 1px solid $blue;
-  color: $blue;
   transition: background-color 200ms ease-in-out;
 
   &:not(:disabled):hover {
@@ -48,8 +48,8 @@
 
 .btn-ghost {
   @extend %btn-base;
-  background-color: transparent;
   color: $primary;
+  background-color: transparent;
   transition: color 200ms ease-in-out;
 
   &:not(:disabled):hover {

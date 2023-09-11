@@ -1,12 +1,12 @@
 .gnb-icon-button {
   @include flexbox;
-  border-radius: 50%;
   position: relative;
-  color: $primary;
-  font-size: 24px;
-  height: 32px;
-  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
   width: 32px;
+  height: 32px;
+  font-size: 24px;
+  color: $primary;
+  border-radius: 50%;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 
   &.is-menu {
     color: $blue;
@@ -19,8 +19,8 @@
   &.is-cart {
     i {
       position: relative;
-      right: 1px;
       top: 1px;
+      right: 1px;
     }
   }
 
@@ -29,20 +29,20 @@
   }
 
   .badge {
-    background-color: $red;
-    border-radius: 10px;
-    color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: block;
-    font-size: 10px;
     height: 16px;
-    letter-spacing: -0.01em;
-    line-height: 16px;
     min-width: 16px;
     padding: 0 4px;
-    position: absolute;
-    right: 0;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    color: $white;
     text-align: center;
-    top: 0;
+    background-color: $red;
+    border-radius: 10px;
   }
 
   @include responsive(T) {

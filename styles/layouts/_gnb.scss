@@ -1,7 +1,7 @@
 .gnb {
+  position: relative;
   background-color: $white;
   border-bottom: 1px solid $border;
-  position: relative;
 
   &-wrapper {
     @include flexbox(between);
@@ -27,8 +27,8 @@
 
     img {
       display: block;
-      height: 20px;
       width: auto;
+      height: 20px;
     }
   }
 
@@ -71,8 +71,8 @@
     }
 
     .logo {
-      margin-right: 32px;
       position: static;
+      margin-right: 32px;
       transform: none;
 
       img {
@@ -91,25 +91,25 @@
 
   @include responsive(D) {
     &-search {
-      margin-right: 24px;
       position: relative;
       width: 264px;
+      margin-right: 24px;
 
       .input-group {
         width: 100%;
       }
 
       .search-history {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        display: none;
+        width: 100%;
+        padding: 16px 8px 8px;
         background-color: $white;
         border: 1px solid border;
         border-radius: 4px;
         box-shadow: $dropdown-shadow;
-        display: none;
-        left: 0;
-        padding: 16px 8px 8px;
-        position: absolute;
-        top: calc(100% + 8px);
-        width: 100%;
 
         &.is-active {
           display: block;

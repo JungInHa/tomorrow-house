@@ -26,12 +26,12 @@
     }
 
     button {
+      width: 6px;
+      height: 6px;
       background-color: $white;
       border-radius: 50%;
-      height: 6px;
       opacity: 0.7;
       transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
-      width: 6px;
     }
 
     img {
@@ -41,17 +41,17 @@
 
   img {
     display: block;
-    height: auto;
     width: 100%;
+    height: auto;
   }
 
   @include responsive(T) {
     padding-right: 30px;
 
     &-slider {
-      border-radius: 4px;
       margin: 0 0 8px 0;
       overflow: hidden;
+      border-radius: 4px;
     }
 
     &-thumbnail {
@@ -75,11 +75,11 @@
 
       button {
         @include flexbox;
-        border-radius: 4px;
-        height: 56px;
-        opacity: 1;
-        overflow: hidden;
         width: 56px;
+        height: 56px;
+        overflow: hidden;
+        border-radius: 4px;
+        opacity: 1;
       }
 
       img {
@@ -94,8 +94,8 @@
     flex-direction: row-reverse;
 
     &-slider {
-      height: 500px;
       width: 500px;
+      height: 500px;
     }
 
     &-thumbnail {
@@ -107,13 +107,13 @@
     }
 
     .thumbnail-item {
-      margin-bottom: 8px;
       margin-right: 0;
+      margin-bottom: 8px;
 
       button,
       img {
-        height: 75px;
         width: 75px;
+        height: 75px;
         transition: transform 200ms ease-in-out;
       }
 

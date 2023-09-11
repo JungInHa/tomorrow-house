@@ -2,13 +2,13 @@
   @include pos-center(fixed);
   z-index: $cart-modal-level;
   display: none;
-  padding: 40px 24px;
   width: calc(100% - #{$grid-margin * 2});
   max-width: 360px;
+  padding: 40px 24px;
   overflow: hidden;
+  text-align: center;
   background-color: $white;
   border-radius: 8px;
-  text-align: center;
 
   &.is-active {
     display: block;

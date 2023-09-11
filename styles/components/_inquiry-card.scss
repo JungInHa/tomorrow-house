@@ -12,8 +12,8 @@
       dd,
       strong {
         &::after {
-          content: '|';
           margin: 0 4px;
+          content: '|';
         }
       }
 
@@ -23,8 +23,8 @@
     }
 
     .detail {
-      color: $primary;
       margin-bottom: 8px;
+      color: $primary;
     }
 
     .misc {
@@ -40,8 +40,8 @@
     @include text-style(13);
 
     .inquiry-content {
-      padding-left: 20px;
       position: relative;
+      padding-left: 20px;
 
       &:first-child:not(:last-child) {
         margin-bottom: 12px;
@@ -62,11 +62,11 @@
     }
 
     span {
-      color: $blue;
-      font-weight: 700;
-      left: 0;
       position: absolute;
       top: 0;
+      left: 0;
+      font-weight: 700;
+      color: $blue;
     }
 
     p {
@@ -74,9 +74,9 @@
       color: $primary;
 
       i {
-        color: $tertiary;
-        font-size: 16px;
         margin-right: 8px;
+        font-size: 16px;
+        color: $tertiary;
       }
     }
   }

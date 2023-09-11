@@ -1,14 +1,14 @@
 .overlay {
-  background-color: rgba($primary, 0.5);
-  height: 100vh;
-  left: 0;
-  opacity: 0;
   position: fixed;
   top: 0;
-  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
-  visibility: hidden;
-  width: 100%;
+  left: 0;
   z-index: $overlay-level;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($primary, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
 
   &.is-active {
     opacity: 1;

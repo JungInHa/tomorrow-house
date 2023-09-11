@@ -1,14 +1,14 @@
 %form-base {
   @include text-style(16, $primary);
-  appearance: none;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
   background-color: $white;
   border: 1px solid $border;
   border-radius: 4px;
-  display: block;
-  height: 40px;
-  padding: 0 16px;
   transition: background-color 200ms ease-in-out;
-  width: 100%;
+  appearance: none;
 
   &::placeholder {
     color: $tertiary;
@@ -32,7 +32,7 @@
 //NOTE: Select
 .select-group {
   position: relative;
-  
+
   &.is-active {
     .form-select {
       border-color: $blue;
@@ -47,29 +47,29 @@
     padding-right: 40px;
     text-overflow: ellipsis;
   }
-  
+
   .ic-caret {
     @include pos-center-y;
-    color: $tertiary;
-    font-size: 24px;
-    pointer-events: none;
     right: 8px;
+    font-size: 24px;
+    color: $tertiary;
+    pointer-events: none;
   }
 }
 
-//NOTE: Input 
+//NOTE: Input
 .input-group {
   position: relative;
 
   .form-input {
-      padding-left: 40px;
+    padding-left: 40px;
   }
 
   .ic-search {
     @include pos-center-y;
-    color: $secondary;
-    font-size: 20px;
     left: 10px;
+    font-size: 20px;
+    color: $secondary;
     pointer-events: none;
   }
 }

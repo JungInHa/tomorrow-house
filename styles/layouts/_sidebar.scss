@@ -2,18 +2,18 @@
   $sidebar-width: 240px;
 
   @include no-scrollbar;
-  background-color: $white;
-  height: 100vh;
-  left: 0;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 32px 20px;
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: $sidebar-level;
+  width: $sidebar-width;
+  height: 100vh;
+  padding: 32px 20px;
+  overflow-y: auto;
+  background-color: $white;
   transform: translate3d(-#{$sidebar-width}, 0, 0);
   transition: transform 300ms ease-in-out;
-  width: $sidebar-width;
-  z-index: $sidebar-level;
+  overscroll-behavior: contain;
 
   &.is-active {
     transform: translate3d(0, 0, 0);
@@ -31,8 +31,8 @@
 
       img {
         display: block;
-        height: 20px;
         width: auto;
+        height: 20px;
       }
     }
   }
@@ -48,8 +48,8 @@
     a {
       @include flexbox(start);
       @include text-style(14, $primary);
-      font-weight: 700;
       width: 100%;
+      font-weight: 700;
     }
 
     .avatar-24 {
@@ -90,9 +90,9 @@
       a {
         @include flexbox(start);
         @include text-style(14, $primary);
+        width: 100%;
         height: 36px;
         padding: 0 12px;
-        width: 100%;
 
         &:active {
           color: $blue;

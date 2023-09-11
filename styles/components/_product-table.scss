@@ -3,15 +3,15 @@
   $table-th-width-sm: 100px;
   $table-th-width-md: 140px + $table-cell-padding;
 
+  width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 100%;
 
   tr {
     @include text-style(12, $primary);
-    border-bottom: 1px solid $border;
     text-align: left;
     vertical-align: top;
+    border-bottom: 1px solid $border;
   }
 
   th,
@@ -20,9 +20,9 @@
   }
 
   th {
-    color: $secondary;
-    font-weight: 400;
     width: $table-th-width-sm + $table-cell-padding;
+    font-weight: 400;
+    color: $secondary;
   }
 
   td {

@@ -1,9 +1,9 @@
 .review-scoreboard {
   @include flexbox;
+  width: 100%;
+  height: 152px;
   background-color: $background;
   border-radius: 4px;
-  height: 152px;
-  width: 100%;
 
   .score-summary,
   .score-detail {
@@ -18,8 +18,8 @@
     .average-score {
       @include text-style(24, $dark);
       display: block;
-      font-weight: 700;
       margin-bottom: 4px;
+      font-weight: 700;
     }
 
     .star-rating {
@@ -28,17 +28,17 @@
   }
 
   .score-detail {
-    text-align: center;
     order: 3;
+    text-align: center;
   }
 
   &::before {
-    background-color: $border;
-    content: '';
     display: block;
-    height: 96px;
     order: 2;
     width: 1px;
+    height: 96px;
+    background-color: $border;
+    content: '';
   }
 
   @include responsive(T) {
@@ -58,8 +58,8 @@
       }
 
       .star-rating {
-        font-size: 24px;
         margin-right: 16px;
+        font-size: 24px;
       }
     }
 

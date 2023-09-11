@@ -6,17 +6,17 @@
   display: none;
   width: 100%;
   max-height: 75vh;
-  overflow-y: scroll;
   padding-top: 16px;
+  overflow-y: scroll;
   background-color: $white;
   border-radius: 12px 12px 0 0;
-  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   overscroll-behavior: contain;
 
   &.is-open {
     display: block;
-    animation-name: modal-fade-in;
     animation-duration: 300ms;
+    animation-name: modal-fade-in;
   }
 
   .order-checkouts,

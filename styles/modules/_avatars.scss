@@ -1,28 +1,28 @@
 %avatar-base {
+  display: block;
+  overflow: hidden;
   background-image: url('/assets/images/img-user-default.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
-  display: block;
-  overflow: hidden;
 
   img {
     display: block;
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    width: 100%;
   }
 }
 
 .avatar-24 {
   @extend %avatar-base;
-  height: 24px;
   width: 24px;
+  height: 24px;
 }
 
 .avatar-32 {
   @extend %avatar-base;
-  height: 32px;
   width: 32px;
+  height: 32px;
 }

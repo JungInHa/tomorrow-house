@@ -1,11 +1,11 @@
 .product-tab {
-  background-color: $white;
-  border-bottom: 1px solid $border;
-  height: $product-tab-height-sm;
   position: sticky;
   top: $gnb-height-sm + $lnb-height-sm;
-  width: 100%;
   z-index: $product-tab-level;
+  width: 100%;
+  height: $product-tab-height-sm;
+  background-color: $white;
+  border-bottom: 1px solid $border;
 
   &-list {
     @include flexbox;
@@ -17,19 +17,19 @@
 
     &.is-active {
       button {
-        border-bottom-color: $blue;
         color: $blue;
+        border-bottom-color: $blue;
       }
     }
 
     button {
       @include flexbox;
       @include text-style(13, $dark);
-      border-bottom: 2px solid transparent;
-      font-weight: 700;
-      height: 40px;
-      white-space: nowrap;
       width: 100%;
+      height: 40px;
+      font-weight: 700;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
 
       &:active {
         color: $blue;
@@ -37,17 +37,17 @@
     }
 
     .badge {
-      color: $secondary;
       margin-left: 4px;
+      color: $secondary;
     }
   }
 
   @include responsive(T) {
+    top: $gnb-height-md + $lnb-height-md;
+    height: $product-tab-height-md;
+    margin: 40px 0;
     background-color: $background;
     border-bottom: 0;
-    height: $product-tab-height-md;
-    top: $gnb-height-md + $lnb-height-md;
-    margin: 40px 0;
 
     &-list {
       margin: 0;

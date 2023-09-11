@@ -19,8 +19,8 @@
       height: 40px;
       font-size: 28px;
       color: $primary;
-      border-radius: 50%;
       background-color: $white;
+      border-radius: 50%;
       transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
 
       &:hover {
@@ -33,13 +33,13 @@
       }
 
       &.is-prev i {
-        transform: rotate(90deg);
         margin-left: -2px;
+        transform: rotate(90deg);
       }
 
       &.is-next i {
-        transform: rotate(-90deg);
         margin-right: -2px;
+        transform: rotate(-90deg);
       }
     }
   }
@@ -71,8 +71,8 @@
       @include flexbox;
       width: 64px;
       height: 64px;
-      border-radius: 4px;
       overflow: hidden;
+      border-radius: 4px;
 
       img {
         display: block;

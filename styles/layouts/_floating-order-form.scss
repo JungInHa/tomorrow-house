@@ -5,8 +5,8 @@
   position: sticky;
   top: $global-header-height;
   flex-direction: column;
-  min-height: calc(100vh - #{$global-header-height + $global-footer-height});
   max-height: calc(100vh - #{$global-header-height});
+  min-height: calc(100vh - #{$global-header-height + $global-footer-height});
   padding: 24px 0;
 
   > * {
@@ -36,7 +36,7 @@
       width: 55px;
       border: 1px solid $border;
       border-radius: 4px;
-      transition: background-color 200mx ease-in-out;
+      transition: background-color 200ms ease-in-out;
 
       &:hover {
         background-color: $background;

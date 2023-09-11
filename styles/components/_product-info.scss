@@ -15,8 +15,8 @@
 
     .info-title {
       @include text-style(18, $dark);
-      font-weight: 400;
       margin-bottom: 4px;
+      font-weight: 400;
     }
 
     .info-review {
@@ -47,10 +47,10 @@
 
     .discount-rate {
       @include inline-flexbox(start);
-      color: $blue;
       font-size: 20px;
       font-weight: 700;
       line-height: 24px;
+      color: $blue;
 
       .rate {
         font-family: $font-price;
@@ -76,8 +76,8 @@
 
   &-delivery {
     @include text-style(16, $primary);
-    border-top: 1px solid $border;
     padding-top: 12px;
+    border-top: 1px solid $border;
 
     span {
       display: block;
@@ -148,9 +148,9 @@
     }
 
     &-delivery {
-      border-bottom: 1px solid $border;
-      padding-bottom: 20px;
       padding-top: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $border;
 
       span {
         margin-bottom: 8px;

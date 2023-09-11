@@ -42,17 +42,17 @@
     margin-bottom: 20px;
 
     .review-image {
-      border-radius: 4px;
+      width: 64px;
       height: 64px;
       margin-bottom: 8px;
       overflow: hidden;
-      width: 64px;
+      border-radius: 4px;
 
       img {
         display: block;
+        width: 100%;
         height: auto;
         object-fit: cover;
-        width: 100%;
       }
     }
 
@@ -65,14 +65,14 @@
     @include flexbox(start);
 
     button {
-      margin-right: 8px;
       width: 120px;
+      margin-right: 8px;
 
       i {
-        color: $white;
-        font-size: 20px;
-        margin-left: -4px;
         margin-right: 4px;
+        margin-left: -4px;
+        font-size: 20px;
+        color: $white;
       }
     }
 
@@ -83,8 +83,8 @@
         font-weight: 400;
 
         span {
-          color: $dark;
           font-weight: 700;
+          color: $dark;
         }
       }
     }
@@ -103,9 +103,9 @@
 
     &-body {
       .review-image {
+        width: 112px;
         height: 112px;
         margin-bottom: 16px;
-        width: 112px;
       }
 
       p {
