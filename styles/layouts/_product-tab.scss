@@ -13,7 +13,7 @@
   }
 
   &-item {
-    width: (100% / 5);
+    width: math.div(100%, 5);
 
     &.is-active {
       button {

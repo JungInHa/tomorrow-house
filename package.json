@@ -6,8 +6,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node-sass": "node-sass",
-    "sass": "node-sass -wr --source-map true styles/main.scss ./style.css"
+    "sass": "sass -w styles/main.scss ./style.css",
+    "sass:build": "sass styles/main.scss ./style.css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/JungInHa/tomorrow-house#readme",
   "dependencies": {
-    "node-sass": "^9.0.0"
+    "sass": "^1.67.0"
   }
 }

@@ -56,7 +56,7 @@
     box-shadow: $popup-shadow;
 
     .close-button {
-      left: (56px - $close-button-size) / 2;
+      left: math.div((56px - $close-button-size), 2);
       font-size: 24px;
 
       &:hover {
